@@ -3,6 +3,7 @@ const router = express.Router();
 const kabupatencontroller = require('./kabupatencontroller');
 const kecamatancontroller = require('./kecamatancontroller');
 const kelurahancontroller = require('./kelurahancontroller');
+const partaicontroller = require('./partaicontroller');
 
 router.get('/kabupaten', kabupatencontroller.getAllData);
 router.post('/kabupaten/add', kabupatencontroller.createKabupaten);
@@ -18,5 +19,10 @@ router.get('/kelurahan', kelurahancontroller.getAllData);
 router.post('/kelurahan/add', kelurahancontroller.createKelurahan);
 router.post('/kelurahan/update', kelurahancontroller.updateKelurahan);
 router.post('/kelurahan/delete', kelurahancontroller.deleteKelurahan);
+
+router.get('/partai', partaicontroller.getAllData);
+router.post('/partai/add', partaicontroller.createPartai);
+router.post('/partai/update', partaicontroller.updatePartai);
+router.post('/partai/delete', partaicontroller.deletePartai);
 
 module.exports = router;
